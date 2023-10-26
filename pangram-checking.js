@@ -1,4 +1,4 @@
-function isPangram(value) {
+function isPangram1(value) {
   let strArr = value.toLowerCase();
   let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
@@ -8,4 +8,19 @@ function isPangram(value) {
     }
   }
   return true;
+}
+
+// or
+
+function isPangram2(string) {
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(function (x) {
+    return string.indexOf(x) !== -1;
+  });
+}
+
+function isPangram3(string) {
+  const alphabetList = [..."abcdefghijklmnopqrstuvwxyz"];
+
+  return alphabetList.every((letter) => string.toLowerCase().includes(letter));
 }
