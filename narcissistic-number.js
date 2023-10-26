@@ -1,7 +1,6 @@
 function narcissistic(value) {
   // split into Array
   const arr = value.toString().split("");
-
   // loop then calculate each value using ** arr.length
   const getPow = arr.map((val) => parseInt(val) ** arr.length);
 
