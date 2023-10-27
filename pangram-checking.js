@@ -24,3 +24,12 @@ function isPangram3(string) {
 
   return alphabetList.every((letter) => string.toLowerCase().includes(letter));
 }
+
+function isPangram4(value) {
+  let alphabet = [..."abcdefghijklmnopqrstuvwxyz"];
+  let bool;
+  alphabet.map((val) =>
+    value.toLowerCase().includes(val) ? (bool = true) : (bool = false)
+  );
+  return bool;
+}
